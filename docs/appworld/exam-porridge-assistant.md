@@ -1,6 +1,7 @@
 # 考试粥助手
 
-> 一款基于 AI 的本地化学习与考试辅助工具。上传学习资料，AI 自动生成复习纲要、学习笔记和练习题，支持刷题、错题追踪和针对性训练。  
+> 一款基于 AI 的本地化学习与考试辅助工具。
+> 上传学习资料，AI 自动生成复习纲要、学习笔记和练习题，支持刷题、错题追踪和针对性训练。
 > 所有数据完全存储在本地浏览器中，不依赖任何云端服务。
 
 ---
@@ -18,30 +19,161 @@
 
 ## 🚀 快速上手
 
-### 本地运行
+### 第一步：安装 Git
 
-```bash
+Git 是一个代码管理工具，用来把项目从 GitHub 下载到你的电脑上。
+
+<details>
+<summary><b>Windows</b>（点击展开）</summary>
+
+1. 打开浏览器，访问 https://git-scm.com/downloads
+2. 点击 **Windows** 版本下载（会自动下载一个 `.exe` 安装文件）
+3. 双击安装文件，**一路点 Next**，所有选项保持默认即可
+4. 安装完成后点击 **Finish**
+
+</details>
+
+<details>
+<summary><b>macOS</b>（点击展开）</summary>
+
+1. 打开终端（按 `Cmd + 空格` 搜索"终端"）
+2. 安装 [Homebrew](https://brew.sh/)（若已安装可跳过）：
+
+   ```
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+
+3. 通过 Homebrew 安装 Git：
+
+   ```
+   brew install git
+   ```
+
+</details>
+
+<details>
+<summary><b>Linux（以 Ubuntu 为例）</b>（点击展开）</summary>
+
+1. 打开终端（`Ctrl + Alt + T`）
+2. 更新软件包列表并安装 Git：
+
+   ```
+   sudo apt update
+   sudo apt install git -y
+   ```
+
+   其他发行版：Fedora 使用 `sudo dnf install git`，Arch Linux 使用 `sudo pacman -S git`。
+
+</details>
+
+**验证安装：** 在终端中输入：
+
+```
+git --version
+```
+
+看到类似 `git version 2.xx.x` 的输出即安装成功。
+
+### 第二步：安装 Node.js
+
+Node.js 是运行本项目所必需的 JavaScript 运行时。
+
+<details>
+<summary><b>Windows</b>（点击展开）</summary>
+
+1. 打开浏览器，访问 https://nodejs.org/zh-cn
+2. 点击 **LTS（长期支持版）** 下载按钮
+3. 双击下载好的 `.msi` 安装文件，一路点 **Next**
+4. 如果看到 "Automatically install the necessary tools" 选项，**勾选它**
+5. 点击 **Install**，等待安装完成，点击 **Finish**
+
+</details>
+
+<details>
+<summary><b>macOS</b>（点击展开）</summary>
+
+**方法一（推荐）：使用 Homebrew**
+
+```
+brew install node
+```
+
+**方法二：从官网下载**
+
+1. 打开浏览器，访问 https://nodejs.org/zh-cn
+2. 点击 **LTS（长期支持版）** 下载按钮
+3. 双击下载好的 `.pkg` 安装文件，按提示完成安装
+
+</details>
+
+<details>
+<summary><b>Linux（以 Ubuntu 为例）</b>（点击展开）</summary>
+
+```
+sudo apt update
+sudo apt install nodejs npm -y
+```
+
+> 如需最新版本，建议使用 [nvm](https://github.com/nvm-sh/nvm) 安装：
+> ```
+> curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+> # 重启终端后
+> nvm install --lts
+> ```
+
+</details>
+
+**验证安装：** 在终端中输入：
+
+```
+node --version
+npm --version
+```
+
+看到类似 `v20.11.0` 和 `10.2.4` 的版本号即成功。
+
+### 第三步：下载项目代码
+
+打开终端，进入你希望存放项目的目录，然后运行：
+
+```
 git clone https://github.com/zjuhechao/exam-porridge-assistant.git
 cd exam-porridge-assistant
+```
+
+### 第四步：安装项目依赖
+
+```
 npm install
+```
+
+> 首次安装需要下载约 200MB 的依赖包，耗时 2-5 分钟。出现黄色的 `WARN` 警告是正常的。
+>
+> **如果安装很慢或失败：** 切换到国内镜像源后重试：
+> ```
+> npm config set registry https://registry.npmmirror.com
+> npm install
+> ```
+
+### 第五步：启动项目
+
+```
 npm run dev
 ```
 
-启动后打开浏览器访问 `http://localhost:3015`。
+等待几秒钟，当终端显示 `webpack compiled successfully` 时，说明启动成功。
 
-> GitHub 仓库提供了从零开始的完整教程，覆盖 Windows / macOS / Linux 全平台。
+> 启动后这个终端窗口不要关闭，关闭终端即关闭应用。
 
-### 配置 AI
+### 第六步：打开应用
 
-应用的核心功能需要 AI API 支持。支持的 AI 服务商：
+打开浏览器，在地址栏输入：
 
-| 服务商 | 说明 |
-|--------|------|
-| DeepSeek | 国内直连，价格低 |
-| 通义千问 | 有免费额度 |
-| OpenAI | 需海外网络 |
+```
+http://localhost:3015
+```
 
-在应用内进入"设置"页面，添加 API 配置即可使用。
+按回车，即可看到考试粥助手的首页。
 
 ---
 
@@ -61,39 +193,16 @@ npm run dev
 
 ---
 
-## ❓ 常见问题
-
-<details>
-<summary><b>AI 功能不工作？</b></summary>
-
-在设置页面检查 API Key、Base URL 和模型名称是否正确填写，并确保点击了"保存设置"。按 F12 查看控制台是否有具体的错误信息。
-</details>
-
-<details>
-<summary><b>数据会丢失吗？</b></summary>
-
-所有数据存储在浏览器本地（IndexedDB）。清除浏览器缓存会丢失数据，不同浏览器之间不共享。建议定期用导出功能备份重要内容。
-</details>
-
-<details>
-<summary><b>如何更新到最新版本？</b></summary>
-
-在项目文件夹中运行：
-
-```
-git pull
-npm install
-npm run dev
-```
-
-</details>
-
----
-
 ## 🔗 链接
 
 <div class="grid cards" markdown>
 
--   [**GitHub 仓库**](https://github.com/zjuhechao/exam-porridge-assistant){ .md-button .md-button--primary }
+-   __GitHub 仓库__
+
+    ---
+
+    浏览完整源码、提交 Issue 或 Star 支持。
+
+    [前往仓库 →](https://github.com/zjuhechao/exam-porridge-assistant){ .md-button .md-button--primary }
 
 </div>
