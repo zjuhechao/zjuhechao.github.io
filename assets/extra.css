@@ -1,0 +1,128 @@
+/* ========== 日间模式（冷色明亮） ========== */
+[data-md-color-scheme="default"] {
+  /* 主色：浅青 -> 天蓝渐变感 */
+  --md-primary-fg-color:        #72BCD5;
+  --md-primary-fg-color--light: #AADCE0;
+  --md-primary-fg-color--dark:  #528FAD;
+  --md-primary-bg-color:        #FFFFFF;
+  
+  /* 强调色：深海蓝 */
+  --md-accent-fg-color:         #1E466E;
+  --md-accent-fg-color--light:  #376795;
+  --md-accent-bg-color:         #FFFFFF;
+  
+  /* 链接颜色：深海蓝 */
+  --md-typeset-a-color:         #1E466E;
+  
+  /* 代码块背景（极浅蓝灰） */
+  --md-code-bg-color:           #F0F4F8;
+  
+  /* 边框与分割线 */
+  --md-default-fg-color--lighter: #B0C4DE;
+}
+
+/* ========== 暗色模式（冷色深邃） ========== */
+[data-md-color-scheme="slate"] {
+  /* 主色：深海蓝 */
+  --md-primary-fg-color:        #1E466E;
+  --md-primary-fg-color--light: #376795;
+  --md-primary-fg-color--dark:  #0D2B3E;
+  --md-primary-bg-color:        #E0E7F0;
+  
+  /* 强调色：浅青 */
+  --md-accent-fg-color:         #72BCD5;
+  --md-accent-fg-color--light:  #AADCE0;
+  --md-accent-bg-color:         #1E466E;
+  
+  /* 链接颜色：浅青 */
+  --md-typeset-a-color:         #AADCE0;
+  
+  /* 代码块背景（深色） */
+  --md-code-bg-color:           #0D2B3E;
+  
+  /* 默认文字颜色微调 */
+  --md-default-fg-color:        #D0DCE8;
+  --md-default-fg-color--light: #A0B8D0;
+}
+
+/* ========== 导航栏渐变（冷色调） ========== */
+[data-md-color-scheme="default"] .md-header {
+  background: linear-gradient(135deg, #72BCD5, #528FAD);
+}
+[data-md-color-scheme="slate"] .md-header {
+  background: linear-gradient(135deg, #1E466E, #0D2B3E);
+}
+
+/* ========== 提示框（Admonitions）边框颜色 ========== */
+[data-md-color-scheme="default"] .md-typeset .admonition,
+[data-md-color-scheme="default"] .md-typeset details {
+  border-left-color: #72BCD5;
+}
+[data-md-color-scheme="slate"] .md-typeset .admonition,
+[data-md-color-scheme="slate"] .md-typeset details {
+  border-left-color: #72BCD5;
+}
+
+/* ========== 状态小方块（使用冷色组） ========== */
+.color-1 { background-color: #AADCE0; color: #1E466E; }
+.color-2 { background-color: #72BCD5; color: #FFFFFF; }
+.color-3 { background-color: #528FAD; color: #FFFFFF; }
+.color-4 { background-color: #376795; color: #FFFFFF; }
+.color-5 { background-color: #1E466E; color: #FFFFFF; }
+
+.box {
+  border-radius: 8px;
+  padding: 4px 12px;
+  display: inline-block;
+  font-size: 0.85rem;
+  margin: 0 4px 4px 0;
+  font-weight: 500;
+}
+
+/* ========== 首页卡片等现有样式保留 ========== */
+.grid.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.grid.cards > div {
+    background: var(--md-default-bg-color);
+    border-radius: 16px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 4px solid var(--md-primary-fg-color);
+}
+
+.grid.cards > div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+}
+
+.md-typeset table:not([class]) {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.md-typeset table:not([class]) th {
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+    font-weight: 600;
+}
+
+.md-typeset table:not([class]) tr:hover {
+    background-color: rgba(0,0,0,0.02);
+}
+
+.md-typeset .admonition {
+    border-radius: 12px;
+}
