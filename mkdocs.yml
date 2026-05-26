@@ -1,0 +1,64 @@
+site_name: 阿刀的全世界
+site_url: https://zjuhechao.github.io
+site_author: 何超
+site_description: 课程资料、经验感悟、我的尝试
+repo_url: https://github.com/zjuhechao/zjuhechao.github.io
+repo_name: zjuhechao/阿刀
+
+theme:
+  name: material
+  language: zh
+  logo: assets/logo.jpg
+  favicon: assets/logo.jpg
+  features:
+    - navigation.tabs        # 顶部标签式导航
+    - navigation.sections    # 侧边栏分组
+    - navigation.top         # 返回顶部按钮
+    - search.suggest         # 搜索建议
+    - search.highlight       # 搜索高亮
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: 切换至深色模式
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: 切换至浅色模式
+
+
+nav:
+  - 主页: index.md
+  - 科研工作: work/index.md
+  - 论文分享: paper/index.md
+  - 读书纪要: book/index.md
+  - 他山之石: stone/index.md
+  - 课程:
+    - 实验报告: labs/index.md
+    - 课程笔记: notebook/index.md
+    - 从夯到拉: peopletalk/index.md
+  - 开发者世界:
+    - appworld/index.md
+    - 考试粥助手: appworld/exam-porridge-assistant.md
+  - 杂事纷纭: another/index.md
+  - 鸟: bird/index.md
+  - 甘之若饴: food/index.md
+  - 碎碎念: dailytalk/index.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji
+
+extra_css:
+  - assets/extra.css
+
+extra_javascript:
+  - assets/extra.js
