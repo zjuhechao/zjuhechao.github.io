@@ -15,7 +15,7 @@
 
     AI 驱动的智能备考工具。上传资料，自动生成复习纲要、笔记和练习题，搭配错题本实现高效复习闭环。
 
-    [:octicons-arrow-right-24: 查看详情](exam-porridge-assistant.md){ .md-button }
+    [查看详情](exam-porridge-assistant.md){ .md-button }
 
 -   __💡 更多工具开发中__
 

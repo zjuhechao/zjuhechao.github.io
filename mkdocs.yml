@@ -42,8 +42,8 @@ nav:
     - 课程笔记: notebook/index.md
     - 从夯到拉: peopletalk/index.md
   - 开发者世界:
-    - 开发者世界: appworld/index.md
-    - 前言汇总: appworld/exam-porridge-assistant.md
+    - 前言汇总: appworld/index.md
+    - 考试粥助手: appworld/exam-porridge-assistant.md
   - 杂事纷纭: another/index.md
   - 鸟: bird/index.md
   - 甘之若饴: food/index.md
